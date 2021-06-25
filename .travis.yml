@@ -3,10 +3,10 @@ services:
     - docker
 
 before_install:
-    - docker build -t bdkuhn/docker-react -f Dockerfile.dev .
+    - docker build -t brianslab/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run -e CI=true bdkuhn/docker-react npm run test
+    - docker run -e CI=true brianslab/docker-react npm run test
 
 deploy:
     provider: elasticbeanstalk
